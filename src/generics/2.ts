@@ -8,7 +8,7 @@ type AllType = {
 type TopType = Pick<AllType, 'name'| 'color'>;
 type BottomType = Pick<AllType, 'position'|'weight'>;
 
-function compare (top: TopType, bottom: BottomType) {
+function compare (top: TopType, bottom: BottomType):TopType | BottomType {
   return {
     name: top.name,
     color: top.color,
